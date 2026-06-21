@@ -11,9 +11,9 @@ CV interactivo / portafolio personal de página única, desplegado en GitHub Pag
 ## Desarrollo
 
 ```bash
-npm install      # instala sass
-npm run build    # compila scss/main.scss -> css/main.css
-npm run dev      # recompila al guardar (watch)
+pnpm install     # instala sass
+pnpm build       # compila scss/main.scss -> css/main.css
+pnpm dev         # recompila al guardar (watch)
 ```
 
 ## Despliegue
