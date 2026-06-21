@@ -34,8 +34,7 @@ jobs:
           cp index.html .nojekyll _site/
           cp js/main.js _site/js/
           pnpm exec sass scss/main.scss _site/css/main.css --style=compressed --no-source-map
-          # Activar dominio propio: renombrar CNAME.example -> CNAME y descomentar.
-          # cp CNAME _site/
+          cp CNAME _site/   # conserva el dominio propio en cada despliegue
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

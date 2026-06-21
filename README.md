@@ -29,17 +29,15 @@ se ejecuta `sass` para compilar el CSS y se sube el sitio. Configuración única
 
 > **Settings → Pages → Source = "GitHub Actions".**
 
-URL: https://sdurutr436.github.io
+URLs: https://sergio-duran-portfolio.com (dominio propio) · https://sdurutr436.github.io
 
 `.nojekyll` evita el procesado Jekyll del artefacto.
 
-### Dominio propio (CNAME) — preparado pero inactivo
+### Dominio propio (CNAME)
 
-Hay un `CNAME.example` de plantilla. Para activar un dominio:
-
-1. Renómbralo a `CNAME` con tu dominio real.
-2. Descomenta la línea `cp CNAME _site/` en `deploy.yml`.
-3. Apunta el DNS a GitHub Pages.
+El dominio `sergio-duran-portfolio.com` está activo en el fichero `CNAME`. El workflow
+lo copia a `_site/` en cada despliegue para conservarlo; solo hay que mantener el DNS
+apuntando a GitHub Pages.
 
 ## Formulario de contacto (backend serverless, opcional)
 
