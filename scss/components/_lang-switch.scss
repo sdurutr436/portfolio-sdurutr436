@@ -1,0 +1,27 @@
+// ============================================================
+// COMPONENTS / LANG-SWITCH — ES / EN toggle.
+// ============================================================
+@use '../abstracts' as *;
+
+.c-lang {
+  display: inline-flex;
+  border: 2px solid $color-ink;
+  font-family: $font-mono;
+  font-size: $fs-label;
+  font-weight: $fw-bold;
+
+  &__btn {
+    padding: $unit $unit * 2;
+    background: $color-white;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 0;
+
+    & + & { border-left: 2px solid $color-ink; }
+
+    &[aria-pressed="true"] {
+      background: $accent;
+      color: $color-amber-ink;
+    }
+  }
+}

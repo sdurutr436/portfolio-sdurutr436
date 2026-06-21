@@ -1,0 +1,55 @@
+// ============================================================
+// COMPONENTS / NAV — sticky top bar.
+// ============================================================
+@use '../abstracts' as *;
+
+.c-nav {
+  position: sticky;
+  top: 0;
+  z-index: $z-nav;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $gutter;
+  padding: $unit * 4 $margin-page;
+  background: rgba($color-surface, 0.9);
+  backdrop-filter: blur(6px);
+  border-bottom: 4px solid $color-ink;
+
+  &__brand {
+    font-family: $font-display;
+    font-size: $fs-headline-md;
+    font-weight: $fw-black;
+    text-transform: uppercase;
+  }
+
+  &__menu {
+    display: none;
+    gap: $unit * 8;
+    align-items: center;
+
+    @include md { display: flex; }
+  }
+
+  &__link {
+    font-family: $font-mono;
+    font-size: $fs-label;
+    font-weight: $fw-medium;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    transition: transform 0.15s ease;
+
+    &:hover { transform: translate(2px, 2px); }
+    &--active {
+      color: $color-amber-deep;
+      font-weight: $fw-bold;
+      border-bottom: 2px solid $color-amber-deep;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $unit * 3;
+  }
+}

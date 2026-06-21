@@ -1,0 +1,31 @@
+// ============================================================
+// COMPONENTS / BUTTON
+// ============================================================
+@use '../abstracts' as *;
+
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $unit * 2;
+  padding: $unit * 3 $unit * 6;
+  font-family: $font-mono;
+  font-size: $fs-label;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  background: $color-white;
+  @include neo;
+  @include neo-press;
+
+  &--primary { background: $accent; color: $color-amber-ink; }
+  &--dark    { background: $color-ink; color: $color-white; }
+  &--block   { width: 100%; }
+
+  // Ghost: border only, no shadow until hover
+  &--ghost {
+    background: transparent;
+    box-shadow: none;
+  }
+}

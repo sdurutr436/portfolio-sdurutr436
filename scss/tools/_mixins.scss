@@ -1,0 +1,41 @@
+// ============================================================
+// TOOLS / MIXINS + FUNCTIONS
+// ============================================================
+@use 'sass:math';
+@use '../settings/colors' as *;
+@use '../settings/config' as *;
+
+// Fluid type: scales between mobile min and desktop max across the viewport.
+@function fluid($min, $max, $vw-min: 360px, $vw-max: 1280px) {
+  $slope: math.div($max - $min, $vw-max - $vw-min);
+  $intercept: $min - $slope * $vw-min;
+  @return clamp(#{$min}, #{$intercept} + #{$slope * 100vw}, #{$max});
+}
+
+// Desktop-and-up media query.
+@mixin md {
+  @media (min-width: $bp-md) { @content; }
+}
+@mixin lg {
+  @media (min-width: $bp-lg) { @content; }
+}
+
+// The neobrutalist signature: hard border + offset shadow that "presses" on hover.
+@mixin neo($shadow-size: $shadow) {
+  border: $border;
+  box-shadow: $shadow-size;
+}
+
+// Interactive press effect for buttons / links styled as buttons.
+@mixin neo-press {
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+
+  &:hover {
+    transform: translate(4px, 4px);
+    box-shadow: $shadow-sm;
+  }
+  &:active {
+    transform: translate(8px, 8px);
+    box-shadow: 0 0 0 0 $color-ink;
+  }
+}

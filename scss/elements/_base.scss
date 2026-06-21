@@ -1,0 +1,33 @@
+// ============================================================
+// ELEMENTS / BASE — bare HTML element styling.
+// ============================================================
+@use '../abstracts' as *;
+
+body {
+  font-family: $font-body;
+  font-size: $fs-body-md;
+  line-height: 1.6;
+  color: $fg-text;
+  background-color: $bg-page;
+  // Dotted grid — the "blueprint" backdrop from the mockups.
+  background-image: radial-gradient(#{$color-ink} 1px, transparent 1px);
+  background-size: 24px 24px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: $font-display;
+  font-weight: $fw-bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+::selection {
+  background: $accent;
+  color: $color-amber-ink;
+}
+
+[hidden] {
+  display: none;
+}

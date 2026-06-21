@@ -1,0 +1,8 @@
+node_modules/
+*.css.map
+.DS_Store
+
+# Documentos de referencia (no forman parte del sitio)
+portfolio-brief.md
+portfolio-brief.en.md
+code-example-*.md

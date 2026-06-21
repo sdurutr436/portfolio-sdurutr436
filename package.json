@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-sdurutr436",
+  "version": "1.0.0",
+  "description": "Interactive CV / portfolio for Sergio Durán Utrera (GitHub Pages, plain HTML + SCSS ITCSS/BEM + vanilla JS i18n).",
+  "private": true,
+  "scripts": {
+    "build": "sass scss/main.scss css/main.css --style=compressed --no-source-map",
+    "dev": "sass --watch scss/main.scss css/main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}

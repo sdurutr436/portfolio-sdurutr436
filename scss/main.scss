@@ -1,0 +1,31 @@
+// ============================================================
+// MAIN — ITCSS entry point.
+// Layers loaded generic -> specific so the cascade stays predictable.
+// settings + tools emit no CSS (consumed via abstracts in each partial).
+// ============================================================
+
+// GENERIC
+@use 'generic/reset';
+
+// ELEMENTS
+@use 'elements/base';
+
+// OBJECTS
+@use 'objects/layout';
+
+// COMPONENTS
+@use 'components/nav';
+@use 'components/lang-switch';
+@use 'components/button';
+@use 'components/badge';
+@use 'components/section-heading';
+@use 'components/hero';
+@use 'components/timeline';
+@use 'components/card';
+@use 'components/about';
+@use 'components/skills';
+@use 'components/form';
+@use 'components/footer';
+
+// UTILITIES
+@use 'utilities/helpers';

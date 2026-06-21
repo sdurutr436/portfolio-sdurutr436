@@ -1,0 +1,53 @@
+// ============================================================
+// COMPONENTS / HERO
+// ============================================================
+@use '../abstracts' as *;
+
+.c-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: $unit * 8;
+  padding-block: $vertical-step;
+
+  @include md { padding-block: $vertical-step * 2; }
+
+  &__title {
+    font-size: fluid(32px, 56px);
+    background: $color-white;
+    padding: $unit * 4 $unit * 8;
+    @include neo;
+  }
+
+  &__accent { color: $color-amber-deep; }
+
+  &__panel {
+    max-width: 640px;
+    text-align: left;
+    background: $accent;
+    padding: $unit * 8;
+    @include neo;
+  }
+
+  &__role {
+    font-size: $fs-headline-md;
+    border-bottom: $border;
+    padding-bottom: $unit * 2;
+    margin-bottom: $unit * 4;
+    letter-spacing: -0.01em;
+  }
+
+  &__lead {
+    font-size: $fs-body-lg;
+    color: rgba($color-ink, 0.9);
+    text-transform: none;
+  }
+
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $unit * 4;
+  }
+}

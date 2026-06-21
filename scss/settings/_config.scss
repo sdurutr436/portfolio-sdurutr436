@@ -1,0 +1,28 @@
+// ============================================================
+// SETTINGS / CONFIG
+// Spacing, borders, shadows, breakpoints, z-index.
+// ============================================================
+@use 'colors' as *;
+
+$unit:          4px;
+$gutter:        24px;
+$vertical-step: 64px;
+$margin-page:   5vw;
+
+// Neobrutalist borders + hard shadows
+$border-width:  3px;
+$border:        $border-width solid $color-ink;
+$radius:        0; // brutalism = sharp corners
+
+$shadow:        8px 8px 0 0 $color-ink;
+$shadow-sm:     4px 4px 0 0 $color-ink;
+$shadow-lg:     12px 12px 0 0 $color-ink;
+
+// Breakpoints
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+// z-index scale
+$z-bg:   -1;
+$z-nav:  50;
+$z-fab:  100;

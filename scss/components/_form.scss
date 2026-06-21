@@ -1,0 +1,112 @@
+// ============================================================
+// COMPONENTS / FORM — contact form + direct channels.
+// ============================================================
+@use '../abstracts' as *;
+
+.c-contact {
+  display: grid;
+  gap: $gutter;
+
+  @include md { grid-template-columns: 3fr 2fr; align-items: start; }
+}
+
+.c-form {
+  display: flex;
+  flex-direction: column;
+  gap: $unit * 6;
+  background: $color-white;
+  padding: $unit * 8;
+  @include neo;
+
+  &__row {
+    display: grid;
+    gap: $unit * 6;
+
+    @include md { grid-template-columns: 1fr 1fr; }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: $unit * 2;
+  }
+
+  &__label {
+    font-family: $font-mono;
+    font-size: $fs-label;
+    font-weight: $fw-bold;
+    text-transform: uppercase;
+  }
+
+  &__input,
+  &__textarea,
+  &__select {
+    width: 100%;
+    padding: $unit * 4;
+    font-family: $font-mono;
+    font-size: $fs-label;
+    background: $color-surface;
+    border: $border;
+    border-radius: $radius;
+
+    &:focus {
+      outline: none;
+      background: #fff9e5; // pale amber focus
+      border-color: $color-amber-deep;
+    }
+  }
+
+  &__textarea { resize: vertical; min-height: 120px; }
+
+  &__status {
+    font-family: $font-mono;
+    font-size: $fs-label;
+    text-transform: none;
+
+    &[data-state="ok"]    { color: $color-amber-deep; }
+    &[data-state="error"] { color: $color-error; }
+  }
+}
+
+.c-channels {
+  display: flex;
+  flex-direction: column;
+  gap: $gutter;
+}
+
+.c-channel {
+  display: flex;
+  align-items: center;
+  gap: $unit * 4;
+  padding: $unit * 5;
+  background: $color-white;
+  @include neo($shadow-sm);
+  @include neo-press;
+
+  &__icon {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    background: $accent;
+    border: $border;
+    font-family: $font-mono;
+    font-weight: $fw-bold;
+  }
+
+  &__label {
+    display: block;
+    font-family: $font-mono;
+    font-size: $fs-label;
+    color: $color-muted;
+    text-transform: uppercase;
+  }
+
+  &__value {
+    font-family: $font-display;
+    font-weight: $fw-bold;
+    text-transform: none;
+    word-break: break-word;
+  }
+}

@@ -1,0 +1,25 @@
+// ============================================================
+// COMPONENTS / BADGE — tech tags + status pills.
+// ============================================================
+@use '../abstracts' as *;
+
+.c-badge {
+  display: inline-block;
+  padding: $unit $unit * 2;
+  font-family: $font-mono;
+  font-size: $fs-label;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  background: $color-surface-variant;
+  border: 2px solid $color-ink;
+  white-space: nowrap;
+
+  &--accent { background: $accent; }
+  &--ink    { background: $color-ink; color: $color-white; }
+}
+
+.c-badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $unit * 2;
+}

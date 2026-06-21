@@ -1,0 +1,22 @@
+// ============================================================
+// COMPONENTS / SECTION-HEADING
+// ============================================================
+@use '../abstracts' as *;
+
+.c-heading {
+  display: inline-block;
+  font-size: fluid(28px, 48px);
+  margin-bottom: $vertical-step;
+
+  &__index {
+    font-family: $font-mono;
+    font-size: $fs-headline-md;
+    color: $color-amber-deep;
+    margin-right: $unit * 2;
+  }
+
+  &--center {
+    display: block;
+    text-align: center;
+  }
+}

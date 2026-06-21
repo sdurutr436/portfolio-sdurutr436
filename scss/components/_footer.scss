@@ -1,0 +1,47 @@
+// ============================================================
+// COMPONENTS / FOOTER
+// ============================================================
+@use '../abstracts' as *;
+
+.c-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gutter;
+  padding: $vertical-step $margin-page;
+  margin-top: $vertical-step;
+  background: $color-inverse;
+  border-top: 4px solid $color-ink;
+  text-align: center;
+
+  @include md {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__brand {
+    font-family: $font-display;
+    font-size: $fs-headline-md;
+    font-weight: $fw-black;
+    color: $color-amber-soft;
+    text-transform: uppercase;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $unit * 6;
+  }
+
+  &__link {
+    font-family: $font-mono;
+    font-size: $fs-label;
+    font-weight: $fw-bold;
+    color: $color-surface-variant;
+    text-transform: uppercase;
+    transition: color 0.15s ease;
+
+    &:hover { color: $accent; }
+  }
+}

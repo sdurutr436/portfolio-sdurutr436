@@ -1,0 +1,77 @@
+// ============================================================
+// COMPONENTS / TIMELINE — branching career axis.
+// Mobile: single left rail. Desktop: centred axis, cards alternate sides.
+// ============================================================
+@use '../abstracts' as *;
+
+$rail-mobile: 24px;
+$connector:   6%;
+
+.c-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: $vertical-step;
+
+  @include md { gap: $vertical-step * 2; }
+
+  // The vertical spine
+  &__axis {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: $rail-mobile;
+    width: $border-width;
+    background: $color-ink;
+    z-index: 0;
+
+    @include md {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: 1;
+    // Mobile: card sits to the right of the rail
+    margin-left: $rail-mobile * 2;
+
+    @include md {
+      display: flex;
+      margin-left: 0;
+    }
+  }
+
+  // Card occupies one half on desktop
+  &__card { width: 100%; }
+
+  @include md {
+    &__item--right { justify-content: flex-end; }
+    &__item--left  { justify-content: flex-start; }
+    &__item--right .c-timeline__card,
+    &__item--left  .c-timeline__card { width: 44%; }
+  }
+
+  // Horizontal connector from the spine to each card
+  &__connector {
+    position: absolute;
+    top: $rail-mobile * 2;
+    left: -$rail-mobile;
+    width: $rail-mobile;
+    height: $border-width;
+    background: $color-ink;
+    z-index: 0;
+
+    @include md {
+      top: 50%;
+      width: $connector;
+      transform: translateY(-50%);
+    }
+  }
+
+  @include md {
+    &__item--right .c-timeline__connector { left: 50%; }
+    &__item--left  .c-timeline__connector { right: 50%; left: auto; }
+  }
+}

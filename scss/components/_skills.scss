@@ -1,0 +1,34 @@
+// ============================================================
+// COMPONENTS / SKILLS — grouped tech stacks.
+// ============================================================
+@use '../abstracts' as *;
+
+.c-skills {
+  display: grid;
+  gap: $gutter;
+
+  @include md { grid-template-columns: repeat(2, 1fr); }
+  @include lg { grid-template-columns: repeat(3, 1fr); }
+}
+
+.c-skill-group {
+  background: $color-white;
+  padding: $unit * 6;
+  @include neo;
+
+  &__title {
+    font-family: $font-mono;
+    font-size: $fs-label;
+    color: $color-amber-deep;
+    text-transform: uppercase;
+    border-bottom: 2px solid $color-ink;
+    padding-bottom: $unit * 2;
+    margin-bottom: $unit * 4;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $unit * 2;
+  }
+}

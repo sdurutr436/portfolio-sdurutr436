@@ -1,0 +1,8 @@
+// ============================================================
+// ABSTRACTS — single entry point for non-emitting layers.
+// Components do `@use '../abstracts' as *;` to get tokens + mixins.
+// ============================================================
+@forward 'settings/colors';
+@forward 'settings/typography';
+@forward 'settings/config';
+@forward 'tools/mixins';

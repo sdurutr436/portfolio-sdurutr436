@@ -1,0 +1,30 @@
+// ============================================================
+// SETTINGS / COLORS
+// Palette lifted from the Stitch style guide (neobrutalist amber/ink).
+// ============================================================
+
+$color-amber:            #ffbf00; // primary action / accent
+$color-amber-dim:        #fbbc00;
+$color-amber-soft:       #ffdfa0;
+$color-amber-deep:       #795900; // primary (text on light)
+$color-amber-ink:        #261a00; // on-amber text
+
+$color-ink:              #1b1b1b; // borders + body text
+$color-white:            #ffffff;
+$color-surface:          #f9f9f9; // page background
+$color-surface-low:      #f3f3f3;
+$color-surface-dim:      #dadada;
+$color-surface-variant:  #e2e2e2;
+$color-surface-high:     #e8e8e8;
+$color-surface-highest:  #e2e2e2;
+$color-inverse:          #303030; // dark footer / panels
+$color-outline:          #827660;
+$color-muted:            #504532; // on-surface-variant
+
+$color-error:            #ba1a1a;
+
+// Semantic aliases
+$bg-page:    $color-surface;
+$fg-text:    $color-ink;
+$fg-border:  $color-ink;
+$accent:     $color-amber;
