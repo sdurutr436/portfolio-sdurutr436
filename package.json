@@ -6,7 +6,8 @@
   "packageManager": "pnpm@10.4.1",
   "scripts": {
     "build": "sass scss/main.scss css/main.css --style=compressed --no-source-map",
-    "dev": "sass --watch scss/main.scss css/main.css"
+    "dev": "sass --watch scss/main.scss css/main.css",
+    "test": "node scripts/check-i18n.mjs"
   },
   "devDependencies": {
     "sass": "^1.101.0"

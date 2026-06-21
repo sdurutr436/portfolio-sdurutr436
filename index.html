@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sergio Durán Utrera · Desarrollador Web Full-Stack Junior</title>
+  <meta name="description" content="Portfolio de Sergio Durán Utrera — técnico de laboratorio reconvertido en desarrollador web full-stack junior. Proyectos en producción real con Angular, Flask y Spring Boot.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400..800&display=swap">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="u-visually-hidden" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+
+  <!-- NAV -->
+  <header>
+    <nav class="c-nav" aria-label="Principal">
+      <a class="c-nav__brand" href="#inicio">SERGIO_DURÁN</a>
+
+      <ul class="c-nav__menu">
+        <li><a class="c-nav__link c-nav__link--active" href="#proyectos" data-i18n="nav_projects">Proyectos</a></li>
+        <li><a class="c-nav__link" href="#sobre-mi" data-i18n="nav_about">Sobre mí</a></li>
+        <li><a class="c-nav__link" href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
+        <li><a class="c-nav__link" href="#contacto" data-i18n="nav_contact">Contacto</a></li>
+      </ul>
+
+      <div class="c-nav__actions">
+        <div class="c-lang" role="group" aria-label="Selector de idioma" data-i18n-aria-label="lang_group">
+          <button class="c-lang__btn" type="button" data-lang="es" aria-pressed="true" lang="es">ES</button>
+          <button class="c-lang__btn" type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+        </div>
+        <a class="c-btn c-btn--primary" href="#contacto" data-i18n="nav_cta">Contáctame</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="o-wrap" id="inicio">
+      <div class="o-container o-section c-hero">
+        <h1 class="c-hero__title">Sergio Durán Utrera<br><span class="c-hero__accent">Full-Stack &amp; Lab</span></h1>
+        <div class="c-hero__panel">
+          <h2 class="c-hero__role" data-i18n="hero_role">Desarrollador web full-stack &amp; técnico de laboratorio</h2>
+          <p class="c-hero__lead" data-i18n="hero_lead">Mentalidad científica aplicada al código. Especializado en Angular, Flask y Spring Boot, con foco en precisión, trazabilidad y testing serio. Junior con proyectos desplegados en producción real.</p>
+          <p class="c-hero__lead u-mono" data-i18n="hero_signature">Constructor técnico que respalda lo que dice con proyectos públicos y desplegados.</p>
+        </div>
+        <div class="c-hero__cta">
+          <a class="c-btn c-btn--primary" href="#proyectos" data-i18n="hero_cta_projects">Ver proyectos</a>
+          <a class="c-btn" href="https://github.com/sdurutr436" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS / TIMELINE -->
+    <section class="o-wrap" id="proyectos">
+      <div class="o-container o-container--wide o-section">
+        <h2 class="c-heading c-heading--center"><span class="c-heading__index">01.</span><span data-i18n="sec_projects">Proyectos</span></h2>
+
+        <div class="c-timeline">
+          <span class="c-timeline__axis" aria-hidden="true"></span>
+
+          <!-- Stay Sidekick (hero, right) -->
+          <div class="c-timeline__item c-timeline__item--right">
+            <span class="c-timeline__connector" aria-hidden="true"></span>
+            <div class="c-timeline__card">
+              <article class="c-card">
+                <div class="c-card__bar">
+                  <span class="c-card__dots" aria-hidden="true">
+                    <span class="c-card__dot c-card__dot--red"></span>
+                    <span class="c-card__dot c-card__dot--mid"></span>
+                    <span class="c-card__dot c-card__dot--grey"></span>
+                  </span>
+                  <span class="c-card__file">stay_sidekick.sh</span>
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__head">
+                    <h3 class="c-card__title">Stay Sidekick</h3>
+                    <span class="c-badge c-badge--accent">PROD</span>
+                  </div>
+                  <p class="c-card__text" data-i18n="proj_ss_desc">Plataforma PropTech full-stack multi-tenant en producción real. Capa satélite sobre los PMS de alquiler vacacional que automatiza tareas operativas: maestro de apartamentos, mapa de calor, avisos de check-in tardío, sincronización de contactos y vault de comunicaciones con IA.</p>
+                  <ul class="c-badge-list">
+                    <li class="c-badge c-badge--accent"><span data-i18n="metric_backend">92 tests backend</span></li>
+                    <li class="c-badge c-badge--accent"><span data-i18n="metric_frontend">297 tests frontend</span></li>
+                    <li class="c-badge c-badge--accent"><span data-i18n="metric_coverage">90% cobertura</span></li>
+                    <li class="c-badge c-badge--accent">WCAG 2.1 AA</li>
+                  </ul>
+                  <ul class="c-badge-list">
+                    <li class="c-badge">Angular 21</li>
+                    <li class="c-badge">Flask</li>
+                    <li class="c-badge">PostgreSQL</li>
+                    <li class="c-badge">Docker</li>
+                    <li class="c-badge">Railway</li>
+                  </ul>
+                  <div class="c-card__links">
+                    <a class="c-btn c-btn--dark" href="https://stay-sidekick.com" target="_blank" rel="noopener">Live ↗</a>
+                    <a class="c-btn" href="https://github.com/sdurutr436/stay-sidekick" target="_blank" rel="noopener">Repo</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Discs & Records (left) -->
+          <div class="c-timeline__item c-timeline__item--left">
+            <span class="c-timeline__connector" aria-hidden="true"></span>
+            <div class="c-timeline__card">
+              <article class="c-card">
+                <div class="c-card__bar">
+                  <span class="c-card__dots" aria-hidden="true">
+                    <span class="c-card__dot c-card__dot--red"></span>
+                    <span class="c-card__dot c-card__dot--mid"></span>
+                    <span class="c-card__dot c-card__dot--grey"></span>
+                  </span>
+                  <span class="c-card__file">discs_records.bin</span>
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__head">
+                    <h3 class="c-card__title">Discs &amp; Records</h3>
+                    <span class="c-badge">FULL-STACK</span>
+                  </div>
+                  <p class="c-card__text" data-i18n="proj_dr_desc">Aplicación full-stack para gestionar colecciones musicales, valorar álbumes y escribir reseñas, con integración de la API de Deezer. Autenticación JWT, sistema de roles y documentación Swagger/OpenAPI.</p>
+                  <ul class="c-badge-list">
+                    <li class="c-badge">Angular 20</li>
+                    <li class="c-badge">Spring Boot 3</li>
+                    <li class="c-badge">Java 21</li>
+                    <li class="c-badge">MariaDB</li>
+                  </ul>
+                  <div class="c-card__links">
+                    <a class="c-btn c-btn--dark" href="https://discs-n-records-ksgvk.ondigitalocean.app" target="_blank" rel="noopener">Live ↗</a>
+                    <a class="c-btn" href="https://github.com/sdurutr436/Proyecto_Disc_and_Records" target="_blank" rel="noopener">Repo</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Transkarte (right) -->
+          <div class="c-timeline__item c-timeline__item--right">
+            <span class="c-timeline__connector" aria-hidden="true"></span>
+            <div class="c-timeline__card">
+              <article class="c-card">
+                <div class="c-card__bar">
+                  <span class="c-card__dots" aria-hidden="true">
+                    <span class="c-card__dot c-card__dot--red"></span>
+                    <span class="c-card__dot c-card__dot--mid"></span>
+                    <span class="c-card__dot c-card__dot--grey"></span>
+                  </span>
+                  <span class="c-card__file">transkarte.exe</span>
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__head">
+                    <h3 class="c-card__title">Transkarte</h3>
+                    <span class="c-badge" data-i18n="status_team">Equipo</span>
+                  </div>
+                  <p class="c-card__text" data-i18n="proj_tk_desc">Mapa interactivo desarrollado en equipo durante el ciclo de DAW. Contenerización con Docker, build optimizado con Vite y flujo de trabajo profesional con issues, milestones y pull requests.</p>
+                  <ul class="c-badge-list">
+                    <li class="c-badge">Vite</li>
+                    <li class="c-badge">Docker</li>
+                    <li class="c-badge" data-i18n="tag_teamwork">Trabajo en equipo</li>
+                  </ul>
+                  <div class="c-card__links">
+                    <a class="c-btn" href="https://github.com/sdurutr436/transkarte-interactive-map" target="_blank" rel="noopener">Repo</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="o-wrap" id="sobre-mi">
+      <div class="o-container o-section">
+        <h2 class="c-heading"><span class="c-heading__index">02.</span><span data-i18n="sec_about">Sobre mí</span></h2>
+        <div class="c-about">
+          <div class="c-about__story">
+            <p class="c-about__lead" data-i18n="about_p1">Empecé en el laboratorio clínico: análisis de muestras en hematología, bioquímica y banco de sangre, donde la precisión, la trazabilidad y los protocolos estrictos no son opcionales. Esa disciplina es hoy mi forma de escribir código.</p>
+            <p class="c-about__lead" data-i18n="about_p2">Tras dos años y cinco meses como recepcionista en alquiler vacacional —donde nació Stay Sidekick— reorienté mi carrera hacia el desarrollo web full-stack. Ahora construyo productos reales, en producción, con tests, cobertura y documentación técnica.</p>
+          </div>
+          <div class="c-about__panel">
+            <h3 class="c-about__panel-title" data-i18n="about_panel_title">Del laboratorio al código</h3>
+            <ul class="c-about__traits">
+              <li class="c-about__trait" data-i18n="about_trait1">Precisión analítica</li>
+              <li class="c-about__trait" data-i18n="about_trait2">Trazabilidad y protocolos</li>
+              <li class="c-about__trait" data-i18n="about_trait3">Testing serio (92+297)</li>
+              <li class="c-about__trait" data-i18n="about_trait4">Documentación técnica</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section class="o-wrap" id="habilidades">
+      <div class="o-container o-container--wide o-section">
+        <h2 class="c-heading"><span class="c-heading__index">03.</span><span data-i18n="sec_skills">Habilidades</span></h2>
+        <div class="c-skills">
+          <div class="c-skill-group">
+            <h3 class="c-skill-group__title" data-i18n="skills_languages">Lenguajes</h3>
+            <ul class="c-skill-group__list">
+              <li class="c-badge">HTML</li><li class="c-badge">CSS/SCSS</li><li class="c-badge">JavaScript</li>
+              <li class="c-badge">TypeScript</li><li class="c-badge">Python</li><li class="c-badge">Java</li><li class="c-badge">SQL</li>
+            </ul>
+          </div>
+          <div class="c-skill-group">
+            <h3 class="c-skill-group__title" data-i18n="skills_frameworks">Frameworks y librerías</h3>
+            <ul class="c-skill-group__list">
+              <li class="c-badge">Angular 20/21</li><li class="c-badge">Flask</li><li class="c-badge">Spring Boot 3</li><li class="c-badge">RxJS</li>
+            </ul>
+          </div>
+          <div class="c-skill-group">
+            <h3 class="c-skill-group__title" data-i18n="skills_databases">Bases de datos</h3>
+            <ul class="c-skill-group__list">
+              <li class="c-badge">PostgreSQL</li><li class="c-badge">MySQL/MariaDB</li><li class="c-badge">MongoDB</li><li class="c-badge">H2</li>
+            </ul>
+          </div>
+          <div class="c-skill-group">
+            <h3 class="c-skill-group__title" data-i18n="skills_devops">DevOps e infraestructura</h3>
+            <ul class="c-skill-group__list">
+              <li class="c-badge">Docker</li><li class="c-badge">Docker Compose</li><li class="c-badge">Nginx</li>
+              <li class="c-badge">Railway</li><li class="c-badge">DigitalOcean</li><li class="c-badge">GitHub Actions</li><li class="c-badge">CI/CD</li>
+            </ul>
+          </div>
+          <div class="c-skill-group">
+            <h3 class="c-skill-group__title" data-i18n="skills_quality">Calidad y testing</h3>
+            <ul class="c-skill-group__list">
+              <li class="c-badge">pytest</li><li class="c-badge">Vitest</li><li class="c-badge">Istanbul</li>
+              <li class="c-badge">Ruff</li><li class="c-badge">Trivy</li><li class="c-badge">Swagger/OpenAPI</li>
+            </ul>
+          </div>
+          <div class="c-skill-group">
+            <h3 class="c-skill-group__title" data-i18n="skills_apis">APIs e integraciones</h3>
+            <ul class="c-skill-group__list">
+              <li class="c-badge">REST</li><li class="c-badge">JWT</li><li class="c-badge">OAuth 2.0</li>
+              <li class="c-badge">Deezer API</li><li class="c-badge">Google People API</li><li class="c-badge">Mailgun</li>
+            </ul>
+          </div>
+          <div class="c-skill-group">
+            <h3 class="c-skill-group__title" data-i18n="skills_ssg">Generadores estáticos</h3>
+            <ul class="c-skill-group__list">
+              <li class="c-badge">11ty</li><li class="c-badge">Astro</li><li class="c-badge">Nunjucks</li>
+            </ul>
+          </div>
+          <div class="c-skill-group">
+            <h3 class="c-skill-group__title" data-i18n="skills_lab">Laboratorio clínico</h3>
+            <ul class="c-skill-group__list">
+              <li class="c-badge" data-i18n="lab_hematology">Hematología</li>
+              <li class="c-badge" data-i18n="lab_biochem">Bioquímica clínica</li>
+              <li class="c-badge" data-i18n="lab_micro">Microbiología</li>
+              <li class="c-badge" data-i18n="lab_immuno">Inmunología</li>
+              <li class="c-badge" data-i18n="lab_bloodbank">Banco de sangre</li>
+              <li class="c-badge" data-i18n="lab_biosafety">Bioseguridad</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="o-wrap" id="contacto">
+      <div class="o-container o-section">
+        <h2 class="c-heading"><span class="c-heading__index">04.</span><span data-i18n="sec_contact">Contacto</span></h2>
+        <p class="c-about__lead" data-i18n="contact_intro">¿Una oferta, una colaboración o una consulta técnica? Escríbeme y respondo lo antes posible.</p>
+
+        <div class="c-contact">
+          <!-- ponytail: data-endpoint empty by default; JS degrades to "email me" until a serverless endpoint is set. See README. -->
+          <form class="c-form" data-endpoint="" novalidate>
+            <div class="c-form__row">
+              <div class="c-form__field">
+                <label class="c-form__label" for="name" data-i18n="form_name">Nombre</label>
+                <input class="c-form__input" id="name" name="name" type="text" required
+                       placeholder="Tu nombre" data-i18n-placeholder="form_name_ph" autocomplete="name">
+              </div>
+              <div class="c-form__field">
+                <label class="c-form__label" for="email" data-i18n="form_email">Email</label>
+                <input class="c-form__input" id="email" name="email" type="email" required
+                       placeholder="tu@email.com" data-i18n-placeholder="form_email_ph" autocomplete="email">
+              </div>
+            </div>
+            <div class="c-form__field">
+              <label class="c-form__label" for="type" data-i18n="form_type">Tipo de consulta</label>
+              <select class="c-form__select" id="type" name="type">
+                <option value="job" data-i18n="form_type_job">Oferta de empleo</option>
+                <option value="collab" data-i18n="form_type_collab">Colaboración</option>
+                <option value="other" data-i18n="form_type_other">Otro</option>
+              </select>
+            </div>
+            <div class="c-form__field">
+              <label class="c-form__label" for="message" data-i18n="form_message">Mensaje</label>
+              <textarea class="c-form__textarea" id="message" name="message" required
+                        placeholder="Cuéntame en qué puedo ayudar…" data-i18n-placeholder="form_message_ph"></textarea>
+            </div>
+            <button class="c-btn c-btn--primary c-btn--block" type="submit" data-i18n="form_submit">Enviar mensaje</button>
+            <p class="c-form__status u-mono" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="c-channels">
+            <a class="c-channel" href="mailto:duran.utrerasergio2612@gmail.com">
+              <span class="c-channel__icon" aria-hidden="true">@</span>
+              <span>
+                <span class="c-channel__label" data-i18n="channel_email">Email directo</span>
+                <span class="c-channel__value">duran.utrerasergio2612@gmail.com</span>
+              </span>
+            </a>
+            <a class="c-channel" href="https://linkedin.com/in/sergio-durán-utrera" target="_blank" rel="noopener">
+              <span class="c-channel__icon" aria-hidden="true">in</span>
+              <span>
+                <span class="c-channel__label">LinkedIn</span>
+                <span class="c-channel__value">sergio-durán-utrera</span>
+              </span>
+            </a>
+            <a class="c-channel" href="https://github.com/sdurutr436" target="_blank" rel="noopener">
+              <span class="c-channel__icon" aria-hidden="true">&lt;/&gt;</span>
+              <span>
+                <span class="c-channel__label">GitHub</span>
+                <span class="c-channel__value">sdurutr436</span>
+              </span>
+            </a>
+            <div class="c-channel">
+              <span class="c-channel__icon" aria-hidden="true">◉</span>
+              <span>
+                <span class="c-channel__label" data-i18n="channel_location">Ubicación</span>
+                <span class="c-channel__value" data-i18n="channel_location_value">Cádiz, España</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="c-footer">
+    <span class="c-footer__brand">SERGIO_DURÁN</span>
+    <span class="u-mono" data-i18n="footer_copy">© 2026 Sergio Durán Utrera · Cádiz, España</span>
+    <nav class="c-footer__links" aria-label="Redes">
+      <a class="c-footer__link" href="https://github.com/sdurutr436" target="_blank" rel="noopener">GitHub</a>
+      <a class="c-footer__link" href="https://linkedin.com/in/sergio-durán-utrera" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="c-footer__link" href="mailto:duran.utrerasergio2612@gmail.com">Email</a>
+    </nav>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -2,6 +2,10 @@ node_modules/
 *.css.map
 .DS_Store
 
+# El CSS se compila en CI (GitHub Actions); el SASS es la fuente. No se versiona.
+css/
+_site/
+
 # Documentos de referencia (no forman parte del sitio)
 portfolio-brief.md
 portfolio-brief.en.md
