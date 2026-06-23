@@ -16,11 +16,20 @@
   letter-spacing: 0.02em;
   cursor: pointer;
   background: $color-white;
-  @include neo;
+  @include neo($shadow-sm); // smaller hard shadow — less heavy than the 8px default
   @include neo-press;
 
   &--primary { background: $accent; color: $color-amber-ink; }
-  &--dark    { background: $color-ink; color: $color-white; }
+
+  // Dark button: drop the black-on-black shadow (it just reads as a blob);
+  // keep the translate feedback without any hard shadow.
+  &--dark {
+    background: $color-ink;
+    color: $color-white;
+    box-shadow: none;
+    &:hover,
+    &:active { box-shadow: none; }
+  }
   &--block   { width: 100%; }
 
   // Ghost: border only, no shadow until hover

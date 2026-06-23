@@ -27,15 +27,16 @@
 }
 
 // Interactive press effect for buttons / links styled as buttons.
+// Subtle on purpose: small offsets so the "spring" doesn't feel exaggerated.
 @mixin neo-press {
   transition: transform 0.1s ease, box-shadow 0.1s ease;
 
   &:hover {
-    transform: translate(4px, 4px);
-    box-shadow: $shadow-sm;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 0 $color-ink;
   }
   &:active {
-    transform: translate(8px, 8px);
+    transform: translate(3px, 3px);
     box-shadow: 0 0 0 0 $color-ink;
   }
 }
