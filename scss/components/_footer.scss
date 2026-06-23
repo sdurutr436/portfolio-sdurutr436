@@ -11,6 +11,7 @@
   padding: $vertical-step $margin-page;
   margin-top: $vertical-step;
   background: $color-inverse;
+  color: $color-surface-variant; // light text on the dark footer (copyright was unreadable)
   border-top: 4px solid $color-ink;
   text-align: center;
 
