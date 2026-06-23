@@ -1,7 +1,7 @@
 name: Deploy to GitHub Pages
 
 # El CSS no está versionado: se compila aquí a partir de scss/ y se publica.
-# Requiere: Settings → Pages → Source = "GitHub Actions".
+# configure-pages con enablement:true pone el Source en "GitHub Actions" solo.
 
 on:
   push:
@@ -34,8 +34,9 @@ jobs:
           cp index.html .nojekyll _site/
           cp js/main.js _site/js/
           pnpm exec sass scss/main.scss _site/css/main.css --style=compressed --no-source-map
-          cp CNAME _site/   # conserva el dominio propio en cada despliegue
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

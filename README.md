@@ -25,19 +25,13 @@ Abre `index.html` con cualquier servidor estático (p. ej. `python -m http.serve
 ## Despliegue (GitHub Pages)
 
 El sitio se publica con **GitHub Actions** (`.github/workflows/deploy.yml`): en cada push a `main`
-se ejecuta `sass` para compilar el CSS y se sube el sitio. Configuración única:
+se ejecuta `sass` para compilar el CSS y se sube el sitio. El propio workflow activa el modo
+"GitHub Actions" en Pages (`configure-pages` con `enablement: true`), así que no hay que tocar
+ajustes a mano.
 
-> **Settings → Pages → Source = "GitHub Actions".**
-
-URLs: https://sergio-duran-portfolio.com (dominio propio) · https://sdurutr436.github.io
+URL: https://sdurutr436.github.io/portfolio-sdurutr436/
 
 `.nojekyll` evita el procesado Jekyll del artefacto.
-
-### Dominio propio (CNAME)
-
-El dominio `sergio-duran-portfolio.com` está activo en el fichero `CNAME`. El workflow
-lo copia a `_site/` en cada despliegue para conservarlo; solo hay que mantener el DNS
-apuntando a GitHub Pages.
 
 ## Formulario de contacto (backend serverless, opcional)
 
