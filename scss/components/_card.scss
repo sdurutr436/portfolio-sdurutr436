@@ -8,12 +8,7 @@
   flex-direction: column;
   background: $color-white;
   @include neo;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-
-  &:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: $shadow-lg;
-  }
+  // Cards stay put — no lift on hover (only the media de-saturates, below).
 
   // Window chrome
   &__bar {
