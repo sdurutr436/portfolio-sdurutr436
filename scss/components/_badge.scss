@@ -4,7 +4,9 @@
 @use '../abstracts' as *;
 
 .c-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: $unit * 1.5;
   padding: $unit $unit * 2;
   font-family: $font-mono;
   font-size: $fs-label;
@@ -16,6 +18,14 @@
 
   &--accent { background: $accent; }
   &--ink    { background: $color-ink; color: $color-white; }
+
+  // brand glyph (simple-icons) — inherits the badge ink colour
+  &__ico {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    fill: currentColor;
+  }
 }
 
 .c-badge-list {
