@@ -89,8 +89,11 @@
     padding-top: $unit * 2;
   }
 
-  // Identity card: a bit more vertical room for the portrait.
+  // Identity card: more vertical room for the portrait, always in colour,
+  // and no hover effect (the photo isn't a "project preview").
   &--profile &__media { aspect-ratio: 4 / 3; }
+  &--profile &__media img,
+  &--profile:hover &__media img { filter: none; }
 
   // key/value rows (location, languages…)
   &__meta {
