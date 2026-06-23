@@ -20,7 +20,7 @@
       <a class="c-nav__brand" href="#inicio">SERGIO_DURÁN</a>
 
       <ul class="c-nav__menu">
-        <li><a class="c-nav__link c-nav__link--active" href="#proyectos" data-i18n="nav_projects">Proyectos</a></li>
+        <li><a class="c-nav__link c-nav__link--active" href="#trayectoria" data-i18n="nav_career">Trayectoria</a></li>
         <li><a class="c-nav__link" href="#sobre-mi" data-i18n="nav_about">Sobre mí</a></li>
         <li><a class="c-nav__link" href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
         <li><a class="c-nav__link" href="#contacto" data-i18n="nav_contact">Contacto</a></li>
@@ -47,22 +47,154 @@
           <p class="c-hero__lead u-mono" data-i18n="hero_signature">Constructor técnico que respalda lo que dice con proyectos públicos y desplegados.</p>
         </div>
         <div class="c-hero__cta">
-          <a class="c-btn c-btn--primary" href="#proyectos" data-i18n="hero_cta_projects">Ver proyectos</a>
+          <a class="c-btn c-btn--primary" href="#trayectoria" data-i18n="hero_cta_career">Ver trayectoria</a>
           <a class="c-btn" href="https://github.com/sdurutr436" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </div>
     </section>
 
-    <!-- PROYECTOS / TIMELINE -->
-    <section class="o-wrap" id="proyectos">
+    <!-- TRAYECTORIA / TIMELINE-CV -->
+    <section class="o-wrap" id="trayectoria">
       <div class="o-container o-container--wide o-section">
-        <h2 class="c-heading c-heading--center"><span class="c-heading__index">01.</span><span data-i18n="sec_projects">Proyectos</span></h2>
+        <h2 class="c-heading c-heading--center"><span class="c-heading__index">01.</span><span data-i18n="sec_career">Trayectoria</span></h2>
 
         <div class="c-timeline">
           <span class="c-timeline__axis" aria-hidden="true"></span>
 
-          <!-- Stay Sidekick (hero, right) -->
+          <!-- Información personal (right) -->
           <div class="c-timeline__item c-timeline__item--right">
+            <span class="c-timeline__connector" aria-hidden="true"></span>
+            <div class="c-timeline__card">
+              <article class="c-card c-card--profile">
+                <div class="c-card__bar">
+                  <span class="c-card__dots" aria-hidden="true">
+                    <span class="c-card__dot c-card__dot--red"></span>
+                    <span class="c-card__dot c-card__dot--mid"></span>
+                    <span class="c-card__dot c-card__dot--grey"></span>
+                  </span>
+                  <span class="c-card__file">perfil.id</span>
+                </div>
+                <div class="c-card__media">
+                  <img src="assets/img/sergio-profile.jpg" alt="Sergio Durán Utrera" width="1280" height="853" loading="lazy">
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__head">
+                    <h3 class="c-card__title">Sergio Durán Utrera</h3>
+                    <span class="c-badge c-badge--accent">JUNIOR</span>
+                  </div>
+                  <p class="c-card__text" data-i18n="personal_tagline">Técnico de laboratorio reconvertido en desarrollador web full-stack.</p>
+                  <div class="c-card__meta">
+                    <div class="c-card__meta-row"><span class="c-card__meta-key" data-i18n="meta_location">Ubicación</span><span data-i18n="meta_location_v">Cádiz, Andalucía, España</span></div>
+                    <div class="c-card__meta-row"><span class="c-card__meta-key" data-i18n="meta_languages">Idiomas</span><span data-i18n="meta_languages_v">Español nativo · Inglés C1</span></div>
+                    <div class="c-card__meta-row"><span class="c-card__meta-key" data-i18n="meta_profile">Perfil</span><span>Full-stack Junior · Angular · Flask · Spring Boot</span></div>
+                  </div>
+                  <div class="c-card__links">
+                    <a class="c-btn c-btn--dark" href="mailto:duran.utrerasergio2612@gmail.com">Email</a>
+                    <a class="c-btn" href="https://linkedin.com/in/sergio-durán-utrera" target="_blank" rel="noopener">LinkedIn ↗</a>
+                    <a class="c-btn" href="https://github.com/sdurutr436" target="_blank" rel="noopener">GitHub ↗</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Estudios (left) -->
+          <div class="c-timeline__item c-timeline__item--left">
+            <span class="c-timeline__connector" aria-hidden="true"></span>
+            <div class="c-timeline__card">
+              <article class="c-card">
+                <div class="c-card__bar">
+                  <span class="c-card__dots" aria-hidden="true">
+                    <span class="c-card__dot c-card__dot--red"></span>
+                    <span class="c-card__dot c-card__dot--mid"></span>
+                    <span class="c-card__dot c-card__dot--grey"></span>
+                  </span>
+                  <span class="c-card__file">estudios.edu</span>
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__head">
+                    <h3 class="c-card__title" data-i18n="card_studies">Estudios</h3>
+                  </div>
+                  <ul class="c-cv">
+                    <li class="c-cv__item">
+                      <div class="c-cv__head">
+                        <span class="c-cv__role" data-i18n="edu1_role">Técnico Superior en Desarrollo de Aplicaciones Web (DAW)</span>
+                        <span class="c-cv__date">2023 – 2026</span>
+                      </div>
+                      <span class="c-cv__org">I.E.S. Rafael Alberti, Cádiz</span>
+                      <p class="c-cv__desc" data-i18n="edu1_desc">Desarrollo front/back, REST APIs, bases de datos relacionales, despliegue cloud, UI/UX, accesibilidad, Git y metodologías ágiles. Ciclo finalizado.</p>
+                    </li>
+                    <li class="c-cv__item">
+                      <div class="c-cv__head">
+                        <span class="c-cv__role" data-i18n="edu2_role">Técnico Superior en Laboratorio Clínico y Biomédico</span>
+                        <span class="c-cv__date">2016 – 2018</span>
+                      </div>
+                      <span class="c-cv__org">I.E.S. Sancti Petri, San Fernando (Cádiz)</span>
+                      <p class="c-cv__desc" data-i18n="edu2_desc">Bioquímica clínica, microbiología, hematología, inmunología, control de calidad, bioseguridad y sistemas LIS.</p>
+                    </li>
+                    <li class="c-cv__item">
+                      <div class="c-cv__head">
+                        <span class="c-cv__role" data-i18n="edu3_role">Bachillerato — Ciencias</span>
+                        <span class="c-cv__date">2014 – 2016</span>
+                      </div>
+                      <span class="c-cv__org">I.E.S. San Ignacio, Cádiz</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Experiencia profesional (right) -->
+          <div class="c-timeline__item c-timeline__item--right">
+            <span class="c-timeline__connector" aria-hidden="true"></span>
+            <div class="c-timeline__card">
+              <article class="c-card">
+                <div class="c-card__bar">
+                  <span class="c-card__dots" aria-hidden="true">
+                    <span class="c-card__dot c-card__dot--red"></span>
+                    <span class="c-card__dot c-card__dot--mid"></span>
+                    <span class="c-card__dot c-card__dot--grey"></span>
+                  </span>
+                  <span class="c-card__file">experiencia.work</span>
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__head">
+                    <h3 class="c-card__title" data-i18n="card_experience">Experiencia profesional</h3>
+                  </div>
+                  <ul class="c-cv">
+                    <li class="c-cv__item">
+                      <div class="c-cv__head">
+                        <span class="c-cv__role" data-i18n="exp1_role">Recepcionista / Atención al cliente</span>
+                        <span class="c-cv__date">2023 – 2025</span>
+                      </div>
+                      <span class="c-cv__org" data-i18n="exp1_org">Alquiler Vacacional · Turismo e Innovación Social, Cádiz</span>
+                      <p class="c-cv__desc" data-i18n="exp1_desc">Gestión de reservas en PMS, atención multicanal, cobros y normativa turística. Origen de Stay Sidekick.</p>
+                    </li>
+                    <li class="c-cv__item">
+                      <div class="c-cv__head">
+                        <span class="c-cv__role" data-i18n="exp2_role">Promotor de Lotería</span>
+                        <span class="c-cv__date">2022 · 2023</span>
+                      </div>
+                      <span class="c-cv__org" data-i18n="exp2_org">Cruz Roja, Cádiz</span>
+                      <p class="c-cv__desc" data-i18n="exp2_desc">Venta presencial, gestión de cobros y conciliación de caja.</p>
+                    </li>
+                    <li class="c-cv__item">
+                      <div class="c-cv__head">
+                        <span class="c-cv__role" data-i18n="exp3_role">Técnico de Laboratorio (prácticas)</span>
+                        <span class="c-cv__date">2018</span>
+                      </div>
+                      <span class="c-cv__org">Hospital Puerta del Mar, Cádiz</span>
+                      <p class="c-cv__desc" data-i18n="exp3_desc">Banco de sangre: recepción, identificación, centrifugación, separación y etiquetado de componentes bajo bioseguridad estricta.</p>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Stay Sidekick (left) -->
+          <div class="c-timeline__item c-timeline__item--left">
             <span class="c-timeline__connector" aria-hidden="true"></span>
             <div class="c-timeline__card">
               <article class="c-card">
@@ -102,8 +234,8 @@
             </div>
           </div>
 
-          <!-- Discs & Records (left) -->
-          <div class="c-timeline__item c-timeline__item--left">
+          <!-- Discs & Records (right) -->
+          <div class="c-timeline__item c-timeline__item--right">
             <span class="c-timeline__connector" aria-hidden="true"></span>
             <div class="c-timeline__card">
               <article class="c-card">
@@ -136,8 +268,8 @@
             </div>
           </div>
 
-          <!-- Transkarte (right) -->
-          <div class="c-timeline__item c-timeline__item--right">
+          <!-- Transkarte (left) -->
+          <div class="c-timeline__item c-timeline__item--left">
             <span class="c-timeline__connector" aria-hidden="true"></span>
             <div class="c-timeline__card">
               <article class="c-card">
@@ -162,6 +294,110 @@
                   </ul>
                   <div class="c-card__links">
                     <a class="c-btn" href="https://github.com/sdurutr436/transkarte-interactive-map" target="_blank" rel="noopener">Repo</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Voluntariado e internacional (right) -->
+          <div class="c-timeline__item c-timeline__item--right">
+            <span class="c-timeline__connector" aria-hidden="true"></span>
+            <div class="c-timeline__card">
+              <article class="c-card">
+                <div class="c-card__bar">
+                  <span class="c-card__dots" aria-hidden="true">
+                    <span class="c-card__dot c-card__dot--red"></span>
+                    <span class="c-card__dot c-card__dot--mid"></span>
+                    <span class="c-card__dot c-card__dot--grey"></span>
+                  </span>
+                  <span class="c-card__file">voluntariado.log</span>
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__head">
+                    <h3 class="c-card__title" data-i18n="card_volunteer">Voluntariado e internacional</h3>
+                  </div>
+                  <ul class="c-cv">
+                    <li class="c-cv__item">
+                      <div class="c-cv__head">
+                        <span class="c-cv__role" data-i18n="vol1_role">Redactor de videojuegos</span>
+                        <span class="c-cv__date">2022 – 2023</span>
+                      </div>
+                      <span class="c-cv__org" data-i18n="vol1_org">Evelon Games (remoto)</span>
+                      <p class="c-cv__desc" data-i18n="vol1_desc">Redacción de noticias, análisis y guías; coordinación remota bajo plazos.</p>
+                    </li>
+                    <li class="c-cv__item">
+                      <div class="c-cv__head">
+                        <span class="c-cv__role" data-i18n="vol2_role">Animador sociocultural</span>
+                        <span class="c-cv__date">2020</span>
+                      </div>
+                      <span class="c-cv__org" data-i18n="vol2_org">European Solidarity Corps · Ostrava (Chequia)</span>
+                      <p class="c-cv__desc" data-i18n="vol2_desc">Dinamización de actividades juveniles en equipo internacional. Certificado Youthpass.</p>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Certificaciones y cursos (left) -->
+          <div class="c-timeline__item c-timeline__item--left">
+            <span class="c-timeline__connector" aria-hidden="true"></span>
+            <div class="c-timeline__card">
+              <article class="c-card">
+                <div class="c-card__bar">
+                  <span class="c-card__dots" aria-hidden="true">
+                    <span class="c-card__dot c-card__dot--red"></span>
+                    <span class="c-card__dot c-card__dot--mid"></span>
+                    <span class="c-card__dot c-card__dot--grey"></span>
+                  </span>
+                  <span class="c-card__file">certificaciones.crt</span>
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__head">
+                    <h3 class="c-card__title" data-i18n="card_certs">Certificaciones y cursos</h3>
+                  </div>
+                  <ul class="c-cv">
+                    <li class="c-cv__item">
+                      <div class="c-cv__head">
+                        <span class="c-cv__role">MongoDB Skill Badge (fundamentals)</span>
+                        <span class="c-cv__date">2025</span>
+                      </div>
+                      <span class="c-cv__org">MongoDB</span>
+                      <p class="c-cv__desc" data-i18n="cert1_desc">Credencial verificable en Credly.</p>
+                    </li>
+                    <li class="c-cv__item">
+                      <div class="c-cv__head">
+                        <span class="c-cv__role" data-i18n="cert2_role">Cursos Turiscool (HORECA)</span>
+                        <span class="c-cv__date">2025</span>
+                      </div>
+                      <span class="c-cv__org">Turiscool</span>
+                      <p class="c-cv__desc" data-i18n="cert2_desc">IA en empresa, primeros auxilios, prevención de incendios, igualdad y economía circular en turismo.</p>
+                    </li>
+                    <li class="c-cv__item">
+                      <div class="c-cv__head">
+                        <span class="c-cv__role" data-i18n="cert3_role">Prevención de riesgos (oficina)</span>
+                        <span class="c-cv__date">2024</span>
+                      </div>
+                      <span class="c-cv__org">Quirón Prevención</span>
+                    </li>
+                    <li class="c-cv__item">
+                      <div class="c-cv__head">
+                        <span class="c-cv__role" data-i18n="cert4_role">Auxiliar de Laboratorio</span>
+                        <span class="c-cv__date">2023</span>
+                      </div>
+                      <span class="c-cv__org" data-i18n="cert4_org">Cámara de Comercio de Cádiz</span>
+                    </li>
+                    <li class="c-cv__item">
+                      <div class="c-cv__head">
+                        <span class="c-cv__role">Youthpass — European Solidarity Corps</span>
+                        <span class="c-cv__date">2020</span>
+                      </div>
+                      <span class="c-cv__org" data-i18n="cert5_org">Comisión Europea</span>
+                    </li>
+                  </ul>
+                  <div class="c-card__links">
+                    <a class="c-btn c-btn--dark" href="https://www.credly.com/badges/e2d5d4eb-dc2d-45e8-ab50-7dea3b7e3dff/linked_in_profile" target="_blank" rel="noopener" data-i18n="cert_badge">Verificar badge ↗</a>
                   </div>
                 </div>
               </article>
