@@ -33,6 +33,7 @@ jobs:
           mkdir -p _site/css _site/js
           cp index.html .nojekyll _site/
           cp js/main.js _site/js/
+          cp -r assets _site/
           pnpm exec sass scss/main.scss _site/css/main.css --style=compressed --no-source-map
       - uses: actions/configure-pages@v5
         with:
