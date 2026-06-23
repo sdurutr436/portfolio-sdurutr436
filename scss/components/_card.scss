@@ -93,4 +93,30 @@
     margin-top: auto;
     padding-top: $unit * 2;
   }
+
+  // Identity card: a bit more vertical room for the portrait.
+  &--profile &__media { aspect-ratio: 4 / 3; }
+
+  // key/value rows (location, languages…)
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: $unit * 2;
+  }
+
+  &__meta-row {
+    display: flex;
+    gap: $unit * 3;
+    font-size: $fs-body-md;
+    text-transform: none;
+  }
+
+  &__meta-key {
+    flex-shrink: 0;
+    min-width: 92px;
+    font-family: $font-mono;
+    font-size: $fs-label;
+    text-transform: uppercase;
+    color: $color-amber-deep;
+  }
 }

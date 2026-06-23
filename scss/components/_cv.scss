@@ -1,0 +1,53 @@
+// ============================================================
+// COMPONENTS / CV — grouped entry list (studies, jobs, certs…)
+// rendered inside a timeline card body.
+// ============================================================
+@use '../abstracts' as *;
+
+.c-cv {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    padding-block: $unit * 3;
+
+    & + & { border-top: 2px solid $color-surface-variant; }
+  }
+
+  &__head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: $unit * 2;
+  }
+
+  &__role {
+    font-family: $font-display;
+    font-weight: $fw-bold;
+    font-size: $fs-body-md;
+    text-transform: none;
+  }
+
+  &__date {
+    font-family: $font-mono;
+    font-size: $fs-label;
+    color: $color-muted;
+    white-space: nowrap;
+  }
+
+  &__org {
+    display: block;
+    margin-top: $unit;
+    font-family: $font-mono;
+    font-size: $fs-label;
+    text-transform: uppercase;
+    color: $color-amber-deep;
+  }
+
+  &__desc {
+    margin-top: $unit * 2;
+    font-size: $fs-body-md;
+    text-transform: none;
+  }
+}
