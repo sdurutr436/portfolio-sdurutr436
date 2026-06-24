@@ -14,7 +14,7 @@
   @include md { padding-block: $vertical-step * 2; }
 
   &__title {
-    font-size: fluid(32px, 56px);
+    font-size: fluid(2rem, 3.5rem);
     background: $color-white;
     padding: $unit * 4 $unit * 8;
     @include neo;

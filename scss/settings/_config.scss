@@ -4,9 +4,10 @@
 // ============================================================
 @use 'colors' as *;
 
-$unit:          4px;
-$gutter:        24px;
-$vertical-step: 64px;
+// Spacing scale in rem (scales with the user's font-size); gutters stay viewport-fluid.
+$unit:          0.25rem; // 4px
+$gutter:        1.5rem;  // 24px
+$vertical-step: 4rem;    // 64px
 $margin-page:   5vw;
 
 // Neobrutalist borders + hard shadows

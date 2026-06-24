@@ -6,7 +6,8 @@
 @use '../settings/config' as *;
 
 // Fluid type: scales between mobile min and desktop max across the viewport.
-@function fluid($min, $max, $vw-min: 360px, $vw-max: 1280px) {
+// Args are rem (breakpoints too) so the slope is unitless -> clamp(rem, rem + vw, rem).
+@function fluid($min, $max, $vw-min: 22.5rem, $vw-max: 80rem) {
   $slope: math.div($max - $min, $vw-max - $vw-min);
   $intercept: $min - $slope * $vw-min;
   @return clamp(#{$min}, #{$intercept} + #{$slope * 100vw}, #{$max});

@@ -6,13 +6,14 @@ $font-display: "Space Grotesk", system-ui, sans-serif; // display + headlines
 $font-body:    "Hanken Grotesk", system-ui, sans-serif;
 $font-mono:    "JetBrains Mono", ui-monospace, monospace; // labels / tags
 
-// Type scale (px values from the style guide; consumed via clamp() in tools)
-$fs-display:      80px;
-$fs-headline-lg:  48px;
-$fs-headline-md:  24px;
-$fs-body-lg:      18px;
-$fs-body-md:      16px;
-$fs-label:        12px;
+// Type scale in rem so text honours the user's browser font-size (WCAG 1.4.4).
+// (1rem = 16px by default — same look, but now resizable.)
+$fs-display:      5rem;      // 80px
+$fs-headline-lg:  3rem;      // 48px
+$fs-headline-md:  1.5rem;    // 24px
+$fs-body-lg:      1.125rem;  // 18px
+$fs-body-md:      1rem;      // 16px
+$fs-label:        0.75rem;   // 12px
 
 $fw-light:   300;
 $fw-regular: 400;
