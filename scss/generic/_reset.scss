@@ -13,7 +13,8 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  overflow-x: clip; // guard against accidental horizontal scroll (keeps sticky working)
+  // No overflow here: it would make <html> the scroll container and break the
+  // sticky header. The horizontal-scroll guard lives on <body> (overflow-x: clip).
 }
 
 img,
