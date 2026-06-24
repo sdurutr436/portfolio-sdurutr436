@@ -52,7 +52,7 @@
     <nav class="c-nav" aria-label="Principal">
       <a class="c-nav__brand" href="#inicio">SERGIO_DURÁN</a>
 
-      <ul class="c-nav__menu">
+      <ul class="c-nav__menu" id="nav-menu">
         <li><a class="c-nav__link c-nav__link--active" href="#trayectoria" data-i18n="nav_career">Trayectoria</a></li>
         <li><a class="c-nav__link" href="#sobre-mi" data-i18n="nav_about">Sobre mí</a></li>
         <li><a class="c-nav__link" href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
@@ -64,7 +64,12 @@
           <button class="c-lang__btn" type="button" data-lang="es" aria-pressed="true" lang="es">ES</button>
           <button class="c-lang__btn" type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
         </div>
-        <a class="c-btn c-btn--primary" href="#contacto" data-i18n="nav_cta">Contáctame</a>
+        <a class="c-btn c-btn--primary c-nav__cta" href="#contacto" data-i18n="nav_cta">Contáctame</a>
+        <button class="c-nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menú" data-i18n-aria-label="nav_toggle">
+          <span class="c-nav__bar"></span>
+          <span class="c-nav__bar"></span>
+          <span class="c-nav__bar"></span>
+        </button>
       </div>
     </nav>
   </header>

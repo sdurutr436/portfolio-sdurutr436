@@ -24,12 +24,69 @@
     text-transform: uppercase;
   }
 
+  // Mobile: dropdown overlay below the bar (shown when .is-open).
+  // Desktop: inline horizontal list.
   &__menu {
     display: none;
-    gap: $unit * 8;
-    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: $unit * 5;
+    padding: $gutter $margin-page;
+    background: $color-surface;
+    border-bottom: 4px solid $color-ink;
 
-    @include md { display: flex; }
+    @include md {
+      display: flex;
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      gap: $unit * 8;
+      padding: 0;
+      background: none;
+      border-bottom: 0;
+    }
+  }
+
+  &.is-open &__menu { display: flex; }
+
+  // Hamburger toggle (mobile only) — 44px touch target.
+  &__toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: $color-white;
+    border: $border;
+    cursor: pointer;
+
+    @include md { display: none; }
+  }
+
+  &__bar {
+    display: block;
+    width: 22px;
+    height: 3px;
+    margin-inline: auto;
+    background: $color-ink;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  &__toggle[aria-expanded="true"] {
+    .c-nav__bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .c-nav__bar:nth-child(2) { opacity: 0; }
+    .c-nav__bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  }
+
+  // CTA is redundant on mobile (Contacto is in the dropdown) — hide it there.
+  &__actions &__cta {
+    display: none;
+    @include md { display: inline-flex; }
   }
 
   &__link {

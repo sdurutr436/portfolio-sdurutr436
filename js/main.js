@@ -11,7 +11,7 @@
     skip: 'Skip to content',
     lang_group: 'Language selector',
     nav_career: 'Career', nav_about: 'About', nav_skills: 'Skills',
-    nav_contact: 'Contact', nav_cta: 'Get in touch',
+    nav_contact: 'Contact', nav_cta: 'Get in touch', nav_toggle: 'Menu',
     hero_role: 'Full-stack web developer & lab technician',
     hero_lead: 'A scientific mindset applied to code. Specialised in Angular, Flask and Spring Boot, with a focus on precision, traceability and serious testing. Junior with projects deployed to real production.',
     hero_signature: 'A technical builder who backs up claims with public, deployed projects.',
@@ -121,6 +121,25 @@
   });
 
   setLang(lang); // caches ES originals + applies stored preference
+
+  // --- Mobile hamburger menu ------------------------------------------------
+  var nav = document.querySelector('.c-nav');
+  var navToggle = nav && nav.querySelector('.c-nav__toggle');
+  if (navToggle) {
+    var setMenu = function (open) {
+      nav.classList.toggle('is-open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+    };
+    navToggle.addEventListener('click', function () {
+      setMenu(!nav.classList.contains('is-open'));
+    });
+    nav.querySelectorAll('.c-nav__link').forEach(function (l) {
+      l.addEventListener('click', function () { setMenu(false); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setMenu(false);
+    });
+  }
 
   // --- Contact form: progressive enhancement --------------------------------
   var form = document.querySelector('.c-form');
