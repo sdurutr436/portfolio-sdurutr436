@@ -20,7 +20,7 @@
   flex-wrap: wrap; // never overflow on narrow screens — actions drop to a new row
   gap: $unit * 2 $gutter;
   padding: $unit * 4 $margin-page;
-  background: rgba($color-surface, 0.9);
+  background: color-mix(in srgb, #{$color-surface} 90%, transparent);
   backdrop-filter: blur(6px);
   border-bottom: 4px solid $color-ink;
 

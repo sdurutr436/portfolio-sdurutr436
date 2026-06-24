@@ -40,7 +40,7 @@
 
   &__lead {
     font-size: $fs-body-lg;
-    color: rgba($color-ink, 0.9);
+    color: color-mix(in srgb, #{$color-ink} 90%, transparent);
     text-transform: none;
   }
 
