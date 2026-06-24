@@ -10,7 +10,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: $gutter;
+  flex-wrap: wrap; // never overflow on narrow screens — actions drop to a new row
+  gap: $unit * 2 $gutter;
   padding: $unit * 4 $margin-page;
   background: rgba($color-surface, 0.9);
   backdrop-filter: blur(6px);
@@ -18,7 +19,7 @@
 
   &__brand {
     font-family: $font-display;
-    font-size: $fs-headline-md;
+    font-size: fluid(18px, $fs-headline-md); // shrinks on mobile
     font-weight: $fw-black;
     text-transform: uppercase;
   }
@@ -50,6 +51,7 @@
   &__actions {
     display: flex;
     align-items: center;
-    gap: $unit * 3;
+    flex-wrap: wrap;
+    gap: $unit * 2 $unit * 3;
   }
 }
