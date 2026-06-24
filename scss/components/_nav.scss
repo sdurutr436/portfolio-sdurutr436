@@ -27,21 +27,24 @@
   // Mobile: dropdown overlay below the bar (shown when .is-open).
   // Desktop: inline horizontal list.
   &__menu {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: $unit * 5;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    flex-direction: column;
-    gap: $unit * 5;
     padding: $gutter $margin-page;
     background: $color-surface;
     border-bottom: 4px solid $color-ink;
-    // Entrance animation: runs when display flips none -> flex (i.e. on open).
-    animation: c-nav-drop 0.22s ease;
+    // Closed state — animates both ways. visibility stays "visible" through the
+    // fade-out (its special transition behaviour), so the close isn't a "puff".
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.5rem);
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
 
     @include md {
-      display: flex;
       position: static;
       flex-direction: row;
       align-items: center;
@@ -49,11 +52,18 @@
       padding: 0;
       background: none;
       border-bottom: 0;
-      animation: none; // desktop menu is always visible — no entrance
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      transition: none;
     }
   }
 
-  &.is-open &__menu { display: flex; }
+  &.is-open &__menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 
   // Hamburger toggle (mobile only) — 44px touch target.
   &__toggle {
@@ -115,9 +125,4 @@
     flex-wrap: wrap;
     gap: $unit * 2 $unit * 3;
   }
-}
-
-@keyframes c-nav-drop {
-  from { opacity: 0; transform: translateY(-0.5rem); }
-  to   { opacity: 1; transform: translateY(0); }
 }
