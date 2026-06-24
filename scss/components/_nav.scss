@@ -3,10 +3,17 @@
 // ============================================================
 @use '../abstracts' as *;
 
-.c-nav {
+// Sticky lives on the header: its parent is <body> (tall enough to stick).
+// A sticky element only sticks within its parent's box, and <header> wraps just
+// the nav, so putting sticky on the nav never had room to stick.
+.c-header {
   position: sticky;
   top: 0;
   z-index: $z-nav;
+}
+
+.c-nav {
+  position: relative; // anchor for the mobile dropdown (position:absolute)
   display: flex;
   align-items: center;
   justify-content: space-between;
