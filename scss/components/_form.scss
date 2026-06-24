@@ -51,7 +51,7 @@
 
     &:focus {
       outline: none;
-      background: #fff9e5; // pale amber focus
+      background: $color-focus-bg; // pale amber focus (themed)
       border-color: $color-amber-deep;
     }
   }
