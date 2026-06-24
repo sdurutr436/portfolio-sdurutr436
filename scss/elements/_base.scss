@@ -9,8 +9,8 @@ body {
   line-height: 1.6;
   color: $fg-text;
   background-color: $bg-page;
-  // Dotted grid — the "blueprint" backdrop from the mockups.
-  background-image: radial-gradient(#{$color-ink} 1px, transparent 1px);
+  // Dotted grid — the "blueprint" backdrop from the mockups (dots at 50% opacity).
+  background-image: radial-gradient(rgba($color-ink, 0.5) 1px, transparent 1px);
   background-size: 24px 24px;
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
