@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400..800&display=swap">
   <link rel="stylesheet" href="css/main.css">
+  <!-- Apply the saved/preferred theme before paint (no flash of light). -->
+  <script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;}catch(e){}})();</script>
 </head>
 <body>
   <!-- Sprite de iconos (simple-icons). Generado con scripts/gen-icons.mjs. -->
@@ -64,6 +66,10 @@
           <button class="c-lang__btn" type="button" data-lang="es" aria-pressed="true" lang="es">ES</button>
           <button class="c-lang__btn" type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
         </div>
+        <button class="c-theme" type="button" aria-pressed="false" aria-label="Cambiar entre tema claro y oscuro" data-i18n-aria-label="theme_toggle">
+          <svg class="c-theme__icon c-theme__icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="c-theme__icon c-theme__icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 1.5v2.5M12 20v2.5M4 12H1.5M22.5 12H20M5.6 5.6 3.8 3.8M20.2 20.2l-1.8-1.8M18.4 5.6l1.8-1.8M3.8 20.2l1.8-1.8"/></svg>
+        </button>
         <a class="c-btn c-btn--primary c-nav__cta" href="#contacto" data-i18n="nav_cta">Contáctame</a>
         <button class="c-nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menú" data-i18n-aria-label="nav_toggle">
           <span class="c-nav__bar"></span>
