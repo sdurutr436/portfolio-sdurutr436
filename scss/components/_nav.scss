@@ -19,7 +19,7 @@
 
   &__brand {
     font-family: $font-display;
-    font-size: fluid(18px, $fs-headline-md); // shrinks on mobile
+    font-size: fluid(1.125rem, $fs-headline-md); // shrinks on mobile
     font-weight: $fw-black;
     text-transform: uppercase;
   }
@@ -93,6 +93,7 @@
   }
 
   &__link {
+    display: block; // full width in the mobile dropdown so the active bar spans it
     font-family: $font-mono;
     font-size: $fs-label;
     font-weight: $fw-medium;
