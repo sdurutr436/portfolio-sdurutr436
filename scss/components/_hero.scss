@@ -26,6 +26,7 @@
     max-width: 640px;
     text-align: left;
     background: $accent;
+    color: $color-amber-ink; // dark text on the amber panel (both themes)
     padding: $unit * 8;
     @include neo;
   }
@@ -40,7 +41,7 @@
 
   &__lead {
     font-size: $fs-body-lg;
-    color: color-mix(in srgb, #{$color-ink} 90%, transparent);
+    color: color-mix(in srgb, #{$color-amber-ink} 88%, transparent); // soft dark on amber
     text-transform: none;
   }
 
