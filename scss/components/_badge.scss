@@ -16,7 +16,7 @@
   border: 2px solid $color-ink;
   white-space: nowrap;
 
-  &--accent { background: $accent; }
+  &--accent { background: $accent; color: $color-amber-ink; } // dark text on amber (theme-independent)
   &--ink    { background: $color-ink; color: $color-white; }
 
   // brand glyph (simple-icons) — inherits the badge ink colour

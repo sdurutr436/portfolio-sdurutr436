@@ -12,6 +12,7 @@
     lang_group: 'Language selector',
     nav_career: 'Career', nav_about: 'About', nav_skills: 'Skills',
     nav_contact: 'Contact', nav_cta: 'Get in touch', nav_toggle: 'Menu',
+    theme_toggle: 'Toggle light/dark theme',
     hero_role: 'Full-stack web developer & lab technician',
     hero_lead: 'A scientific mindset applied to code. Specialised in Angular, Flask and Spring Boot, with a focus on precision, traceability and serious testing. Junior with projects deployed to real production.',
     hero_signature: 'A technical builder who backs up claims with public, deployed projects.',
@@ -121,6 +122,22 @@
   });
 
   setLang(lang); // caches ES originals + applies stored preference
+
+  // --- Dark / light theme toggle (initial theme set by inline <head> script) -
+  var themeBtn = document.querySelector('.c-theme');
+  if (themeBtn) {
+    var root = document.documentElement;
+    var syncTheme = function () {
+      themeBtn.setAttribute('aria-pressed', String(root.dataset.theme === 'dark'));
+    };
+    syncTheme();
+    themeBtn.addEventListener('click', function () {
+      var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      localStorage.setItem('theme', next);
+      syncTheme();
+    });
+  }
 
   // --- Mobile hamburger menu ------------------------------------------------
   var nav = document.querySelector('.c-nav');

@@ -10,7 +10,7 @@ body {
   color: $fg-text;
   background-color: $bg-page;
   // Dotted grid — the "blueprint" backdrop from the mockups (dots at 50% opacity).
-  background-image: radial-gradient(rgba($color-ink, 0.5) 1px, transparent 1px);
+  background-image: radial-gradient(color-mix(in srgb, #{$color-ink} 50%, transparent) 1px, transparent 1px);
   background-size: 24px 24px;
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;

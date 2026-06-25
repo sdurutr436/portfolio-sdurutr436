@@ -51,7 +51,7 @@
 
     &:focus {
       outline: none;
-      background: #fff9e5; // pale amber focus
+      background: $color-focus-bg; // pale amber focus (themed)
       border-color: $color-amber-deep;
     }
   }
@@ -90,6 +90,7 @@
     display: grid;
     place-items: center;
     background: $accent;
+    color: $color-amber-ink; // dark glyph on amber (both themes)
     border: $border;
     font-family: $font-mono;
     font-weight: $fw-bold;

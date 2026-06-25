@@ -1,27 +1,50 @@
 // ============================================================
-// SETTINGS / COLORS
-// Palette lifted from the Stitch style guide (neobrutalist amber/ink).
+// SETTINGS / COLORS — light & dark themes via CSS custom properties.
+// The Sass $color-* tokens point at the CSS vars, so every component themes
+// automatically. rgba() can't take a CSS var, so the few translucent spots
+// use color-mix() instead (see _base, _nav, _hero).
 // ============================================================
 
-$color-amber:            #ffbf00; // primary action / accent
-$color-amber-dim:        #fbbc00;
-$color-amber-soft:       #ffdfa0;
-$color-amber-deep:       #795900; // primary (text on light)
-$color-amber-ink:        #261a00; // on-amber text
+:root {
+  color-scheme: light;
+  --surface:         #f9f9f9; // page background
+  --elevated:        #ffffff; // cards / raised surfaces
+  --surface-variant: #e2e2e2; // badges, separators
+  --ink:             #1b1b1b; // text + borders + hard shadows
+  --muted:           #504532; // secondary text
+  --accent-strong:   #795900; // amber accent text / lines
+  --focus-bg:        #fff9e5; // form focus background
+}
 
-$color-ink:              #1b1b1b; // borders + body text
-$color-white:            #ffffff;
-$color-surface:          #f9f9f9; // page background
-$color-surface-low:      #f3f3f3;
-$color-surface-dim:      #dadada;
-$color-surface-variant:  #e2e2e2;
-$color-surface-high:     #e8e8e8;
-$color-surface-highest:  #e2e2e2;
-$color-inverse:          #303030; // dark footer / panels
-$color-outline:          #827660;
-$color-muted:            #504532; // on-surface-variant
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface:         #141414;
+  --elevated:        #232323;
+  --surface-variant: #2e2e2e;
+  --ink:             #ededed; // flips light: borders & hard shadows stay visible
+  --muted:           #b6b0a3;
+  --accent-strong:   #ffcf57; // accessible amber on dark
+  --focus-bg:        #332f1c;
+}
 
-$color-error:            #ba1a1a;
+// Accent (amber) — identical in both themes.
+$color-amber:      #ffbf00; // primary action / accent
+$color-amber-soft: #ffdfa0; // footer brand
+$color-amber-ink:  #261a00; // ink text on amber
+$color-error:      #ba1a1a;
+
+// Fixed dark slab (footer + about panel) and its light text — same both themes.
+$color-inverse:     #303030;
+$color-on-inverse:  #e2e2e2;
+
+// Themed tokens — resolve to the CSS vars above.
+$color-ink:             var(--ink);
+$color-white:           var(--elevated);
+$color-surface:         var(--surface);
+$color-surface-variant: var(--surface-variant);
+$color-muted:           var(--muted);
+$color-amber-deep:      var(--accent-strong);
+$color-focus-bg:        var(--focus-bg);
 
 // Semantic aliases
 $bg-page:    $color-surface;

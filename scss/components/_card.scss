@@ -17,6 +17,7 @@
     gap: $unit * 2;
     padding: $unit * 2 $unit * 3;
     background: $accent;
+    color: $color-amber-ink; // dark text on the amber title bar (both themes)
     border-bottom: $border;
   }
 

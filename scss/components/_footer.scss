@@ -11,7 +11,7 @@
   padding: $vertical-step $margin-page;
   margin-top: $vertical-step;
   background: $color-inverse;
-  color: $color-surface-variant; // light text on the dark footer (copyright was unreadable)
+  color: $color-on-inverse; // fixed light text — footer is an always-dark slab
   border-top: 4px solid $color-ink;
   text-align: center;
 
@@ -39,7 +39,7 @@
     font-family: $font-mono;
     font-size: $fs-label;
     font-weight: $fw-bold;
-    color: $color-surface-variant;
+    color: $color-on-inverse;
     text-transform: uppercase;
     transition: color 0.15s ease;
 

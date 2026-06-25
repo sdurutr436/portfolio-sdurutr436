@@ -23,8 +23,8 @@
   &__lead + &__lead { margin-top: $unit * 4; }
 
   &__panel {
-    background: $color-ink;
-    color: $color-white;
+    background: $color-inverse;   // stays a dark slab in both themes
+    color: $color-on-inverse;
     padding: $unit * 8;
     @include neo($shadow);
   }
