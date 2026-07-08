@@ -7,8 +7,6 @@
   display: grid;
   gap: $gutter;
 
-  @include md { grid-template-columns: 3fr 2fr; align-items: start; }
-
   &__story {
     background: $color-white;
     padding: $unit * 8;
@@ -21,37 +19,4 @@
   }
 
   &__lead + &__lead { margin-top: $unit * 4; }
-
-  &__panel {
-    background: $color-inverse;   // stays a dark slab in both themes
-    color: $color-on-inverse;
-    padding: $unit * 8;
-    @include neo($shadow);
-  }
-
-  &__panel-title {
-    color: $accent;
-    font-size: $fs-headline-md;
-    margin-bottom: $unit * 4;
-  }
-
-  &__traits {
-    display: flex;
-    flex-direction: column;
-    gap: $unit * 3;
-  }
-
-  &__trait {
-    display: flex;
-    gap: $unit * 2;
-    font-family: $font-mono;
-    font-size: $fs-label;
-    text-transform: uppercase;
-
-    &::before {
-      content: ">";
-      color: $accent;
-      font-weight: $fw-bold;
-    }
-  }
 }
